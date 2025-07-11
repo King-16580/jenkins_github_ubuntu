@@ -1,8 +1,5 @@
 pipeline {
-    agent { 
-        node {
-            label 'my_docker_label'
-            }
+    agent { label 'my-linux-agent' }
     stages {
 
         stage('Install rsync') {
