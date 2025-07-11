@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'my-linux-agent' }
     stages {
 
         stage('Install rsync') {
