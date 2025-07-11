@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Install rsync') {
             steps {
-                sh 'ifconfig'
+                sh 'ls -rtl'
             }
         }
         stage('Deploy code folder to remote') {
