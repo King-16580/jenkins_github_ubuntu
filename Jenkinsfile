@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Install rsync') {
+            steps {
+                sh 'ifconfig'
+            }
+        }
         stage('Deploy code folder to remote') {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: 'remote-ssh', keyFileVariable: 'KEYFILE', usernameVariable: 'USER')]) {
