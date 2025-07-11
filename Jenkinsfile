@@ -8,7 +8,7 @@ pipeline {
                     sh '''
                         echo "rsync -avz code/ zijan@172.23.33.192:/home/zijan/work/jenkins_github/"
                     '''
-                }
+               // }
             }
         }
     }
