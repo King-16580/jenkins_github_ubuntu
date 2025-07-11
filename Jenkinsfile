@@ -1,10 +1,10 @@
 pipeline {
-    agent { label 'my-linux-agent' }
+    agent any
     stages {
 
         stage('Install rsync') {
             steps {
-                sh 'which rsync || (apt-get update && apt-get install -y rsync)'
+                sh 'ifconfig'
             }
         }
         
