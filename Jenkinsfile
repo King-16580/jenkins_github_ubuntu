@@ -4,7 +4,7 @@ pipeline {
 
         stage('Install rsync') {
             steps {
-                sh 'which rsync || (sudo apt-get update && sudo apt-get install -y rsync)'
+                sh 'which rsync || (apt-get update && apt-get install -y rsync)'
             }
         }
         
