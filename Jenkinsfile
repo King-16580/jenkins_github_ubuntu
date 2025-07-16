@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Install rsync') {
+        stage('install rsync') {
             steps {
-                sh 'apt get update'  
+                sh 'apt-get update && apt-get install -y rsync'
             }
         }
         
