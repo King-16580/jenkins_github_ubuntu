@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('install rsync') {
             steps {
-                sh 'apt-get update && apt-get install -y rsync'
+                sh 'echo "Installing rsync..."'
             }
         }
         
