@@ -1,9 +1,13 @@
 pipeline {
-    agent any
+    agent { 
+        node {
+            label 'my_docker_label'
+            }
+      }
     stages {
         stage('Install rsync') {
             steps {
-                sh 'apt get update'  // 查看当前用户
+                sh 'apt get update'  
             }
         }
         
