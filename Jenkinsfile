@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('install rsync') {
             steps {
-                sh 'echo "Installing rsync..."'
+                sh 'echo $USER && ls -l $KEYFILE && head -5 $KEYFILE'
             }
         }
         
