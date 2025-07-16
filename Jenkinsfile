@@ -1,13 +1,9 @@
 pipeline {
-    agent {
-        docker {
-            image 'ubuntu:latest'
-        }
-    }
+    agent any
     stages {
         stage('Install rsync') {
             steps {
-                sh 'whoami'  // 查看当前用户
+                sh 'apt get update'  // 查看当前用户
             }
         }
         
