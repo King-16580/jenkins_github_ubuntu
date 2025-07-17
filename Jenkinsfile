@@ -12,6 +12,7 @@ pipeline {
                 sh 'whoami && echo "This is an interim stage for testing purposes."'
             }
         }
+    }
         stage('Deploy code folder to remote') {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: 'remote-ssh', keyFileVariable: 'KEYFILE', usernameVariable: 'USER')]) {
