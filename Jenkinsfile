@@ -8,7 +8,7 @@ pipeline {
         }
         stage('interim stage') {
             steps {
-                sh 'whoami && echo "This is an interim stage for testing purposes."'
+                sh 'whoami && echo "This is  an interim stage for testing purposes."'
             }
         }
         stage('Deploy code folder to remote') {
