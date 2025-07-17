@@ -6,13 +6,11 @@ pipeline {
                 sh 'echo $USER && ls -l $KEYFILE && head -5 $KEYFILE'
             }
         }
-    stages {
         stage('interim stage') {
             steps {
-                sh 'whoami && echo "This is an   interim stage for testing purposes."'
+                sh 'whoami && echo "This is an interim stage for testing purposes."'
             }
         }
-    }
         stage('Deploy code folder to remote') {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: 'remote-ssh', keyFileVariable: 'KEYFILE', usernameVariable: 'USER')]) {
